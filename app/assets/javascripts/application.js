@@ -17,32 +17,33 @@
 
 function onlyOnce() {
   var button = $(event.target);
-  button.prop("disabled", "true");
-  button.closest("form").submit();
+  button.prop('disabled', 'true');
+  button.closest('form').submit();
 }
 
 function hideDeletedElement() {
-  var container = $(event.target).closest(".association.container");
+  var container = $(event.target).closest('.association.container');
   container.hide();
-  container.find(".destroy").prop("checked", "true");
+  container.find('.destroy').prop('checked', 'true');
 }
 
 function hideAddElement() {
-  lastLink = document.getElementById('last-button');
-  lastLink.parentElement.parentElement.hidden = true;
+  var container = $('.association.container');
+  container.last().hide();
 }
 
 function showAddElement() {
-  lastLink = document.getElementById('last-button');
-  lastLink.parentElement.parentElement.hidden = false;
+  var container = $('.association.container');
+  container.last().show();
 }
 
 function smoothScroll() {
-  $('#nav a').on("click", function(){
-    var navId = $(this).attr("href");
+  $('#nav a').on('click', function(){
+    var navId = $(this).attr('href');
     $('body').animate({scrollTop: $(navId).offset().top}, 'slow');
     return false;
   });
 }
 
+$(hideAddElement);
 $(smoothScroll);
