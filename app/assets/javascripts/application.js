@@ -45,5 +45,6 @@ function smoothScroll() {
   });
 }
 
+
 $(hideAddElement);
 $(smoothScroll);
