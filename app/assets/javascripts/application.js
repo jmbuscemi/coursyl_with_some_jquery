@@ -50,7 +50,7 @@ function smoothScroll() {
 }
 
 $('.datetimepicker').datetimepicker({
-  formatTime:'g:i a'
+  formatTime: 'g:i a'
 });
 
 $(hideAddElement);
