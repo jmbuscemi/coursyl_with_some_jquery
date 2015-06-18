@@ -31,7 +31,7 @@ gem 'font-awesome-rails'
 
 gem 'devise'
 
-gem 'bootstrap-datetimepicker-rails'
+gem 'jquery-datetimepicker-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require d3
+//= require jquery.datetimepicker
+//= require jquery.datetimepicker/init
 //= require_tree .
+
+
 
 function onlyOnce() {
   var button = $(event.target);
@@ -45,6 +49,9 @@ function smoothScroll() {
   });
 }
 
+$('.datetimepicker').datetimepicker({
+  formatTime:'g:i a'
+});
 
 $(hideAddElement);
 $(smoothScroll);

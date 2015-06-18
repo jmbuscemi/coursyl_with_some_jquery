@@ -6,13 +6,17 @@
   <div class="modal-body">
     <%= form_for(assignment) do |f| %>
       <%= f.label :active_at %>
-      <%= f.text_field :active_at %>
+      <%= f.text_field :active_at, class: "datetimepicker" %>
+
       <%= f.label :due_at %>
-      <%= f.date_field :due_at %>
+      <%= f.text_field :due_at, class: "datetimepicker"  %>
       <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
         <%= f.submit "Save Changes", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
+
+
+
 </div>
