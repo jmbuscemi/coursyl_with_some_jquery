@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require d3
-//= require jquery.datetimepicker
-//= require jquery.datetimepicker/init
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
 
 
@@ -49,8 +49,26 @@ function smoothScroll() {
   });
 }
 
-$('.datetimepicker').datetimepicker({
-  formatTime:'g:i a'
+$(function () {
+  $('#datetimepicker8').datetimepicker({
+    icons: {
+      time: "fa fa-clock-o",
+      date: "fa fa-calendar",
+      up: "fa fa-arrow-up",
+      down: "fa fa-arrow-down"
+    }
+  });
+});
+
+$(function () {
+  $('#datetimepicker9').datetimepicker({
+    icons: {
+      time: "fa fa-clock-o",
+      date: "fa fa-calendar",
+      up: "fa fa-arrow-up",
+      down: "fa fa-arrow-down"
+    }
+  });
 });
 
 $(hideAddElement);
