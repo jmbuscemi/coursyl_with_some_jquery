@@ -20,23 +20,22 @@
 
 
 function onlyOnce() {
-  var button = $(event.target);
-  button.prop('disabled', 'true');
-  button.closest('form').submit();
+  $(event.target).attr("disabled", true);
+  $(event.target).closest('form').submit();
 }
 
-function hideDeletedElement() {
+function hideDeleteElement() {
   var container = $(event.target).closest('.association.container');
   container.hide();
   container.find('.destroy').prop('checked', 'true');
 }
 
-function hideAddElement() {
+function hideEmptyElement() {
   var container = $('.association.container');
   container.last().hide();
 }
 
-function showAddElement() {
+function showElement() {
   var container = $('.association.container');
   container.last().show();
 }
@@ -53,5 +52,21 @@ $('.datetimepicker').datetimepicker({
   formatTime: 'g:i a'
 });
 
-$(hideAddElement);
+$(hideEmptyElement);
 $(smoothScroll);
+
+$(function(){
+  $("input[type=submit]").on("click", onlyOnce);
+});
+
+$(function(){
+  $(".new-association").on("click", showElement)
+})
+
+$(function(){
+  $(".delete-association").on("click", hideDeleteElement)
+})
+
+$(function(){
+  $(".flush-association").on("click", hideDeleteElement)
+})
