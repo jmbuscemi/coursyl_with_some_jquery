@@ -57,16 +57,7 @@ $(smoothScroll);
 
 $(function(){
   $("input[type=submit]").on("click", onlyOnce);
+  $(".new-association").on("click", showElement);
+  $(".delete-association").on("click", hideDeleteElement);
+  $(".flush-association").on("click", hideDeleteElement);
 });
-
-$(function(){
-  $(".new-association").on("click", showElement)
-})
-
-$(function(){
-  $(".delete-association").on("click", hideDeleteElement)
-})
-
-$(function(){
-  $(".flush-association").on("click", hideDeleteElement)
-})
